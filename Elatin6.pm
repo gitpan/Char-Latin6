@@ -28,7 +28,7 @@ BEGIN {
 # (and so on)
 
 BEGIN { eval q{ use vars qw($VERSION) } }
-$VERSION = sprintf '%d.%02d', q$Revision: 0.87 $ =~ /(\d+)/xmsg;
+$VERSION = sprintf '%d.%02d', q$Revision: 0.88 $ =~ /(\d+)/xmsg;
 
 BEGIN {
     my $PERL5LIB = __FILE__;
@@ -431,7 +431,6 @@ sub Latin6::rindex($$;$);
 # Character class
 #
 BEGIN { eval q{ use vars qw(
-    $anchor
     $dot
     $dot_s
     $eD
@@ -460,7 +459,7 @@ BEGIN { eval q{ use vars qw(
     $eb
     $eB
 ) } }
-${Elatin6::anchor}      = qr{\G(?:[\x00-\xFF])*?};
+
 ${Elatin6::dot}         = qr{(?:[^\x0A])};
 ${Elatin6::dot_s}       = qr{(?:[\x00-\xFF])};
 ${Elatin6::eD}          = qr{(?:[^0-9])};
@@ -496,6 +495,35 @@ ${Elatin6::not_word}    = qr{(?:[^\x30-\x39\x41-\x5A\x5F\x61-\x7A])};
 ${Elatin6::not_xdigit}  = qr{(?:[^\x30-\x39\x41-\x46\x61-\x66])};
 ${Elatin6::eb}          = qr{(?:\A(?=[0-9A-Z_a-z])|(?<=[\x00-\x2F\x40\x5B-\x5E\x60\x7B-\xFF])(?=[0-9A-Z_a-z])|(?<=[0-9A-Z_a-z])(?=[\x00-\x2F\x40\x5B-\x5E\x60\x7B-\xFF]|\z))};
 ${Elatin6::eB}          = qr{(?:(?<=[0-9A-Z_a-z])(?=[0-9A-Z_a-z])|(?<=[\x00-\x2F\x40\x5B-\x5E\x60\x7B-\xFF])(?=[\x00-\x2F\x40\x5B-\x5E\x60\x7B-\xFF]))};
+
+# avoid: Name "Elatin6::foo" used only once: possible typo at here.
+${Elatin6::dot}         = ${Elatin6::dot};
+${Elatin6::dot_s}       = ${Elatin6::dot_s};
+${Elatin6::eD}          = ${Elatin6::eD};
+${Elatin6::eS}          = ${Elatin6::eS};
+${Elatin6::eW}          = ${Elatin6::eW};
+${Elatin6::eH}          = ${Elatin6::eH};
+${Elatin6::eV}          = ${Elatin6::eV};
+${Elatin6::eR}          = ${Elatin6::eR};
+${Elatin6::eN}          = ${Elatin6::eN};
+${Elatin6::not_alnum}   = ${Elatin6::not_alnum};
+${Elatin6::not_alpha}   = ${Elatin6::not_alpha};
+${Elatin6::not_ascii}   = ${Elatin6::not_ascii};
+${Elatin6::not_blank}   = ${Elatin6::not_blank};
+${Elatin6::not_cntrl}   = ${Elatin6::not_cntrl};
+${Elatin6::not_digit}   = ${Elatin6::not_digit};
+${Elatin6::not_graph}   = ${Elatin6::not_graph};
+${Elatin6::not_lower}   = ${Elatin6::not_lower};
+${Elatin6::not_lower_i} = ${Elatin6::not_lower_i};
+${Elatin6::not_print}   = ${Elatin6::not_print};
+${Elatin6::not_punct}   = ${Elatin6::not_punct};
+${Elatin6::not_space}   = ${Elatin6::not_space};
+${Elatin6::not_upper}   = ${Elatin6::not_upper};
+${Elatin6::not_upper_i} = ${Elatin6::not_upper_i};
+${Elatin6::not_word}    = ${Elatin6::not_word};
+${Elatin6::not_xdigit}  = ${Elatin6::not_xdigit};
+${Elatin6::eb}          = ${Elatin6::eb};
+${Elatin6::eB}          = ${Elatin6::eB};
 
 #
 # Latin-6 split
