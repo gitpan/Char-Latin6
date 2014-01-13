@@ -1,14 +1,12 @@
 NAME
 
-       Char::Latin6 - Source code filter for Latin-6 script (Imitation JPerl)
+       Latin6 - Source code filter for Latin-6 script (Imitation JPerl)
 
 SYNOPSIS
 
     In your script:
 
-      use Char::Latin6; # CPAN formal style
-         or
-      use Latin6; # casual style
+      use Latin6;
 
     At command prompt:
 
