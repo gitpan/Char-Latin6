@@ -12,7 +12,7 @@ DESCRIPTION
   environment in Latin-6 by easy installation and easy usage.
 
   - Character oriented regular expression
-  - Character oriented run-time routines
+  - Character oriented runtime routines
   - Character oriented subroutines
       and
   - Byte oriented CORE::* functions
@@ -45,6 +45,7 @@ INSTALLATION
 
 SUBROUTINES
 
+  Latin6::eval(charstring)
   Latin6::length(charstring)
   Latin6::substr(charstring, charpos, charlen)
   and more...
